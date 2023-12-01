@@ -5,7 +5,7 @@ const scrappWeb = async () => {
     let browser;
 
     try {
-        browser = await chromium.launch();
+        browser = await chromium.launch({ headless: true });
         const page = await browser.newPage();
         
         await page.goto('https://open.bymadata.com.ar/#/dashboard', { timeout: 120000 });
