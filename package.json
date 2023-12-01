@@ -1,14 +1,14 @@
 {
   "name": "backend",
   "engines": {
-    "node": "20.9.0"
+    "node": ">=16.14.2 <20.10.0"
   },
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "postinstall": "npm i playwright",
+    "postinstall": "npx playwright install",
     "dev": "npx nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
