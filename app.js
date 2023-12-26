@@ -23,5 +23,5 @@ app.get('/web-scrapping-api', async (req, res) => {
 })
 
 app.listen( PORT, () => {
-    console.log(`App listening on ${port}...`);
+    console.log(`App listening on ${PORT}...`);
 })
