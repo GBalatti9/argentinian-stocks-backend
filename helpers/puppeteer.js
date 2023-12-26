@@ -16,8 +16,8 @@ const webScrapping = async () => {
         const page = await browser.newPage();
         console.log('Open browser...');
 
-        const navigationTimeout = 300000;
-        page.setDefaultNavigationTimeout(navigationTimeout);
+        // const navigationTimeout = 300000;
+        // page.setDefaultNavigationTimeout(navigationTimeout);
         console.log('Navigation to the page...');
 
         await page.goto('https://open.bymadata.com.ar/#/dashboard');
