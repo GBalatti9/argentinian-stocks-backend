@@ -26,13 +26,14 @@ const scrappWeb = async () => {
 
         console.log('Extracting table data...');
         const data = await extractTableData(tableSelector);
+        console.log({ data });
 
-        const filePath = path.join(__dirname, '../../frontend', 'src', 'data', 'scrapedData.json');
-        console.log({ filePath });
-        await fs.promises.writeFile(filePath, JSON.stringify( data ));
-        await fs.promises.writeFile('data/scrapedData.json', JSON.stringify(data));
-        console.log('Data written to file successfully.')
-        // return data;
+        // const filePath = path.join(__dirname, '../../frontend', 'src', 'data', 'scrapedData.json');
+        // console.log({ filePath });
+        // await fs.promises.writeFile(filePath, JSON.stringify( data ));
+        // await fs.promises.writeFile('data/scrapedData.json', JSON.stringify(data));
+        // console.log('Data written to file successfully.')
+        return data;
     } catch (error) {
         console.log(error);
     } finally {
