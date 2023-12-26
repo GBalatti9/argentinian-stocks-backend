@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors());
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get('/', async (req, res) => {
     res.send("App working correctly...");
@@ -22,6 +22,6 @@ app.get('/web-scrapping-api', async (req, res) => {
     res.json({ data });
 })
 
-app.listen( process.env.PORT || port, () => {
+app.listen( PORT, () => {
     console.log(`App listening on ${port}...`);
 })
