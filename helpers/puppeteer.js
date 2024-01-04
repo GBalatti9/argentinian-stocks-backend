@@ -12,10 +12,10 @@ const webScrapping = async () => {
                 "--single-process",
                 "--no-zygote",
             ],
-            executablePath: 'google-chrome-stable'
-                // process.env.NODE_ENV === 'production' ? 
-                // process.env.PUPPETEER_EXECUTABLE_PATH : 
-                // puppeteer.executablePath()
+            executablePath: 
+                process.env.NODE_ENV === 'production' ? 
+                process.env.PUPPETEER_EXECUTABLE_PATH : 
+                puppeteer.executablePath()
         });
         const page = await browser.newPage();
         console.log('Open browser...');
