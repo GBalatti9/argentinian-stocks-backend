@@ -5,7 +5,7 @@ const webScrapping = async () => {
 
     try {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: "new",
             args: [
                 "--disable-setuid=sandbox",
                 "--no-sandbox",
